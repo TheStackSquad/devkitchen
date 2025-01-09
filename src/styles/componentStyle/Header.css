@@ -1,0 +1,146 @@
+/* src/app/css/Header.css */
+.header {
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  top: .5rem;
+  background-color: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  font-family: var(--fontfamilyMacondo);
+}
+
+.nav-container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.logo {
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid orangered;
+  box-shadow:0px  2px 8px rgb(122, 81, 5);
+  padding: .2rem;
+  font-weight: bold;
+  letter-spacing: .3rem;
+  color: #333;
+}
+.icons-container{
+  display: flex;
+  gap: .4rem;
+  width: fit-content;
+}
+.cart-icon{
+  background-color: lightblue;
+  padding: var(--padding);
+  margin-left: .5rem;
+  position: relative;
+}
+.mobile-menu-btn,
+.cart-icon{
+  width: 50px;
+  height: 50px;
+  padding: .5rem;
+  cursor: pointer;
+  border-radius: 50%;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-menu-btn {
+  background: none;
+  border: none;
+  background-color: orange;
+}
+.mobile-menu-btn:hover,
+.mobile-menu-btn:focus {
+  border-radius: .3rem;
+  box-shadow:0px  2px 8px rgb(122, 81, 5);
+}
+
+.menu-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #333;
+}
+/* Base styles for the dropdown */
+.mobile-dropdown {
+position: absolute;
+left: 0;
+right: 0;
+background-color: whitesmoke;
+padding: .1rem 0px .5rem 0px;
+width: 100%;
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+gap: 0.5rem;
+}
+
+.mobile-nav-link {
+  color: #4B5563;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  padding:.3rem 0px .3rem .7rem;
+  position: relative;
+  overflow-x: hidden; /* Ensure the animated background doesn't spill out */
+  transition: color 0.2s ease;
+  display: flex;
+  font-family: var(--fontfamilyMacondo);
+  gap: .7rem;
+}
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  font-weight: 600;
+}
+@media (min-width: 576px){
+  .mobile-nav-link {
+    display: flex;
+    font-size: 1.1rem;
+  }
+}
+.mobile-nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color:#111827;
+  transition: width 0.4s ease-in-out;
+  z-index: -1; /* Keeps the background behind the text */
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  color: #E5E7EB;
+}
+
+.mobile-nav-link:hover::before,
+.mobile-nav-link:focus::before {
+  width: 100%; /* Animate the background color from 0% to 100% */
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-icon {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.2;
+}
+
+.nav-text {
+  position: relative;
+  z-index: 1;
+}

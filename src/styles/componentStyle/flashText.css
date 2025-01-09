@@ -1,0 +1,47 @@
+/* FlashText.css */
+@font-face {
+  font-family: Josefin;
+  src: url(/asset/fontz/JosefinSans-Regular.woff2);
+}
+.flash-text-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  height: auto;
+  font-family: Josefin;
+}
+
+.flash-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  word-wrap: break-word;
+  color: rgb(2, 39, 71);
+  text-shadow: .2rem .1rem orange;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 576px){
+  .flash-text-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+  }
+  .flash-text {
+    font-size: 4.5rem;
+  }
+}
+
+
+@media screen and (min-width: 885px){
+  .flash-text-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+  }
+  .flash-text {
+    font-size: 6.5rem;
+  }
+}
