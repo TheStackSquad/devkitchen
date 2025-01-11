@@ -1,11 +1,11 @@
 //src/app/Dashboard/page.js
 'use client'
-import DashboardLayout from '@/components/ui/dashboardLayout';
+import ProfileLayout from '@/components/ui/vendorProfileLayout';
 
-export default function Dashboard() {
+export default function VendorProfile() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <  DashboardLayout />
+    <  ProfileLayout />
     </div>
   );
 }

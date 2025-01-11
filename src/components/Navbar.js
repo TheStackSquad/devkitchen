@@ -48,9 +48,11 @@ const Header = ({ navItems }) => {
               )}
             </svg>
           </button>
-          <div className='cart-icon'>
-          <FaShoppingCart />
-          </div>
+          <div className="cart-icon">
+          <Link href="/Checkout">
+      <FaShoppingCart style={{ cursor: "pointer" }} />
+    </Link>
+    </div>
           </div>
         </div>
 
