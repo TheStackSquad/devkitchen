@@ -1,0 +1,66 @@
+.profileGrid{
+    border: 2px solid red;
+    width: 100%;
+}
+/* src/styles/profile.css */
+
+/* Image containers wrapper - handles the flex layout */
+.image-containers-wrapper {
+    /* Default mobile-first styles (xs screens) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  /* Profile picture container */
+  .profile-pic-container {
+    width: 128px; /* 8rem - equivalent to w-32 */
+    height: 128px; /* 8rem - equivalent to h-32 */
+    flex-shrink: 0; /* Prevents the profile pic from shrinking */
+    order: 1; /* Places profile pic first on mobile */
+  }
+  
+  /* Cover image container */
+  .cover-image-container {
+    width: 95%; /* Takes up most of the container width on mobile */
+    height: 192px; /* 12rem - equivalent to h-48 */
+    border-radius: 0.5rem; /* equivalent to rounded-lg */
+    order: 2; /* Places cover image second on mobile */
+  }
+  
+  /* Medium screens and up (md: 768px and above) */
+  @media (min-width: 768px) {
+    .image-containers-wrapper {
+      flex-direction: row; /* Places containers side by side */
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 2rem;
+    }
+  
+    .profile-pic-container {
+      order: 2; /* Moves profile pic to the right */
+    }
+  
+    .cover-image-container {
+      width: 300px; /* Fixed width on medium screens */
+      order: 1; /* Moves cover image to the left */
+    }
+  }
+  
+  /* Add some hover effects for better visual feedback */
+  .profile-pic-container:hover,
+  .cover-image-container:hover {
+    border-color: #3b82f6; /* blue-500 */
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* Ensure images maintain aspect ratio and cover their containers */
+  .profile-pic-container img,
+  .cover-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

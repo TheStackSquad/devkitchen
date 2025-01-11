@@ -27,7 +27,7 @@ const SlideNav = () => {
               </div>
               <div
                 className={`${styles['custom-button']} ${styles['btn-2']}`}
-                onClick={() => router.push('/login')}
+                onClick={() => router.push('/Login')}
               >
                 Login Here
               </div>
@@ -40,7 +40,7 @@ const SlideNav = () => {
           <div className={styles['button-section']}>
             <div
               className={`${styles['custom-button']} ${styles['btn-2']}`}
-              onClick={() => router.push('/vendor')}
+              onClick={() => router.push('/Vendor')}
             >
               Find Out More
             </div>
@@ -56,7 +56,7 @@ const SlideNav = () => {
           <div className={styles['button-section']}>
             <div
               className={`${styles['custom-button']} ${styles['btn-1']}`}
-              onClick={() => router.push('/rider')}
+              onClick={() => router.push('Rider')}
             >
               Join Us
             </div>

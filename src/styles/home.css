@@ -1,0 +1,29 @@
+.home{
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.section2{
+    background-color: orange;
+}
+
+/* Section 3 */
+.section3 {
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  .star-listing{
+    font-family: var(--fontfamilyMacondo);
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
